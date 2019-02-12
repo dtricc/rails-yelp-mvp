@@ -5,8 +5,10 @@
   <p><%= review.rating %></p>
 <% end %>
 <br>
-<%= link_to 'back to restaurants', restaurants_path %>
-<%= link_to 'add a review', new_restaurant_review_path(@restaurant) %>
-<%= link_to 'Delete this', method: :delete %>
+<%= link_to 'Delete this', restaurant_path(@restaurant.id), method: :delete %>
+
+
+<%= link_to 'add a review', new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+<%= link_to 'back to restaurants', restaurants_path, class: "btn btn-primary" %>
 
 
